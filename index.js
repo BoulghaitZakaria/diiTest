@@ -1,9 +1,8 @@
 function test(){
     console.log('this is a test');
-    let element = document.getElementsByClassName('slds-modal_prompt');
-    if(element){
-     parentNode.removeChild(element);
-        element.remove();
+    console.log('about get element by tag name');
+    var element = document.getElementsByTagName("section"), index;
+    for (index = element.length - 1; index >= 0; index--) {
+        element[index].parentNode.removeChild(element[index]);
     }
-    console.log('end');
 }
